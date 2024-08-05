@@ -1,6 +1,5 @@
 .homepage {
   width: 90%;
-  height: 100%;
   margin: auto;
 }
 h1 {
@@ -51,8 +50,8 @@ p {
 }
 .avatar {
   cursor: pointer;
-  width: 13vh;
-  height: 13vh;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   /* 使容器变成圆形 */
   overflow: hidden;
@@ -131,12 +130,12 @@ select {
   padding: 0 18px;
   cursor: pointer;
   line-height: 6vh;
-  font-weight: 800;
-  font-size: 1.8vh;
 }
 .comment-title li a {
   color: #ffffff;
   text-decoration: none;
+  font-size: 1vw;
+  font-weight: 600;
 }
 .comment-title li:hover {
   background-color: #33775b;
@@ -146,34 +145,4 @@ select {
 }
 .comment-list {
   overflow-y: auto;
-}
-.footer {
-  width: 100%;
-  height: 10vh;
-  background-color: #459258;
-  text-align: center;
-}
-.footer ul {
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-}
-.footer li {
-  display: inline-block;
-  list-style-type: none;
-  padding: 0 10px;
-  line-height: 10vh;
-  font-size: 2.5vh;
-  font-weight: 600;
-  color: #ffffff;
-}
-.footer li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-.footer li:hover {
-  background-color: #33775b;
-  height: 100%;
-  padding: 0px 10px;
-  margin: 0px;
 }

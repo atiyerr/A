@@ -50,14 +50,6 @@
             </div>
         </div>
 
-        <div class="footer">
-            <ul class="links">
-                <li><a href="#about">About us</a></li>
-                <li>|</li>
-                <li><a href="#contact">Contact us</a></li>
-            </ul>
-        </div>
-
 </div>
     
 </template>
