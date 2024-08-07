@@ -1,0 +1,195 @@
+.above {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  /* 固定在顶部 */
+  left: 0;
+  /* 固定在左侧 */
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.above .logo {
+  display: none;
+}
+.above .variety {
+  display: flex;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #459258;
+  cursor: pointer;
+}
+.above .variety li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 10px;
+}
+.above .variety a {
+  text-decoration: none;
+  color: #459258;
+}
+.above .variety a:hover {
+  color: #215a42;
+}
+.above .state {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #459258;
+  cursor: pointer;
+}
+.above .state li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 10px;
+}
+.above .state a {
+  text-decoration: none;
+  color: #459258;
+}
+.above .state a:hover {
+  color: #215a42;
+}
+.below {
+  width: 939px;
+}
+.homepage {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+h1 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  color: #ffffff;
+  text-shadow: 5px 2px 4px #7ce696;
+  text-align: center;
+  font-size: 49px;
+  height: 50px;
+  margin: auto;
+  background-color: #246851;
+  cursor: default;
+}
+p {
+  padding-top: 25px;
+  color: #7ce696;
+  text-align: center;
+  font-size: 15px;
+  height: 30px;
+  background-color: #246851;
+  margin: auto;
+  cursor: default;
+}
+.container {
+  width: 100%;
+  align-items: stretch;
+  /* 使子元素在容器内拉伸以适应高度 */
+  height: 100vh;
+  /* 使容器占满整个视口高度 */
+}
+.container .set {
+  display: none;
+}
+.container .comment {
+  width: 100%;
+  background-color: #8ccc9c;
+  border-top: 5px solid #ffffff;
+  border-left: 5px;
+  box-sizing: border-box;
+}
+.container .comment .publish {
+  width: 100%;
+  height: 225px;
+  cursor: default;
+}
+.container .comment .publish .btn {
+  cursor: pointer;
+}
+.container .comment .publish select {
+  cursor: pointer;
+}
+.container .comment .publish .text {
+  width: 98%;
+  height: 150px;
+  resize: none;
+  margin: 5px;
+}
+.container .comment .publish .file-label {
+  display: inline-block;
+  padding: 5px 5px;
+  background-color: #6c8299;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.5vh;
+  margin-left: 20px;
+}
+.container .comment .publish .file-label:hover {
+  background-color: #0056b3;
+}
+.container .comment .publish .file-label input[type="file"] {
+  display: none;
+  /* 隐藏原始的文件选择按钮 */
+}
+.container .comment .comment-container {
+  margin-top: 0px;
+  width: 100%;
+}
+.container .comment .comment-container .comment-title {
+  list-style-type: none;
+  margin: 0px;
+  background-color: #459258;
+}
+.container .comment .comment-container .comment-title li {
+  display: inline-block;
+  padding: 9px 15px;
+  cursor: pointer;
+  line-height: 35px;
+  font-size: 17px;
+}
+.container .comment .comment-container .comment-title li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.container .comment .comment-container .comment-title li:hover {
+  background-color: #33775b;
+  height: 34.5px;
+  padding: 9px 15px;
+  margin: 0px;
+}
+.container .comment .comment-list {
+  overflow-y: auto;
+}
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: #459258;
+  text-align: center;
+}
+.footer ul {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+.footer li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 10px;
+  line-height: 10vh;
+  font-size: 2.5vh;
+  font-weight: 600;
+  color: #ffffff;
+}
+.footer li a {
+  text-decoration: none;
+}
+.footer li:hover {
+  background-color: #33775b;
+  height: 80px;
+  padding: 0px 10px;
+  margin: 0px;
+}

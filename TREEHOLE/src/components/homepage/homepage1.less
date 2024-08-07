@@ -1,0 +1,242 @@
+// 适配宽度大于789px窗口
+.above{
+    position:fixed;
+    width: 100%;
+    height: 50px;
+    top: 0; /* 固定在顶部 */
+    left: 0; /* 固定在左侧 */
+    background-color: #ffffff;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.1);
+    .logo{
+        width: auto;
+        height: 50px;
+        float: left;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        h3{
+            float: right;
+            font-size: 20px;
+            font-weight: 600;
+            color: #459258;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    }
+    .variety{
+        display: none;
+    }
+    .state{
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #459258;
+        cursor: pointer;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 0 10px;
+        }
+        a{
+            text-decoration: none;
+            color: #459258;
+            &:hover{
+                color: #215a42;
+            }
+        }
+        
+    }
+   
+}
+
+.homepage{
+    padding-top: 50px;
+    width: 90%;
+    height:100%;
+    margin: auto;
+}
+
+h1{
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #ffffff;
+    text-shadow: 5px 2px 4px #7ce696;
+    text-align: center;
+    font-size: 5vw;
+    height: 8vw;
+    margin:auto;
+    background-color:rgb(36, 104, 81);
+    cursor:default;
+}
+
+p{
+    color: #7ce696;
+    text-align: center;
+    font-size: 1.5vw;
+    height: 3vw;
+    background-color:rgb(36, 104, 81);
+    margin:auto;
+    cursor:default;
+}
+
+.container {
+    width:100%;
+    display: flex;
+    justify-content: space-between; /* 使子元素在容器内左右分布 */
+    align-items: stretch; /* 使子元素在容器内拉伸以适应高度 */
+    height: 100vh; /* 使容器占满整个视口高度 */
+}
+
+
+.set{
+    width: 25%;
+    background-color:#8ccc9c;
+    float: left;
+    border-top: 5px solid #ffffff;
+    .personal{
+        width: 100%;
+        height: 28.5vh;
+        background-color: #459258;
+        padding-top: 50px;
+        padding-left: 50px;
+        .avatar{
+            cursor: pointer;
+            width: 13vh;
+            height: 13vh;
+            border-radius: 50%; /* 使容器变成圆形 */
+            overflow: hidden; /* 隐藏超出圆形区域的内容 */
+            border: 2px solid #ccc; /* 可选：添加边框 */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill; /* 保持图片比例 */
+            }
+        }
+    }
+    .profile {
+        li{
+            cursor: default;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.comment{
+    width: 75%;
+    background-color: #8ccc9c;
+    float: right;
+    border-left: 5px solid #ffffff;
+    border-top: 5px solid #ffffff;
+    box-sizing: border-box;
+    .publish{
+        width: 100%;
+        height: 25vh;
+        cursor:default;
+        .btn{
+            cursor: pointer;
+        }
+        select{
+            cursor:pointer;
+        }
+        .text{
+            width:98%;
+            height: 80%;
+            resize: none;
+            margin: 5px;
+        }
+        .file-label {
+            display: inline-block;
+            padding: 5px 5px;
+            background-color: #6c8299;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.5vh;
+            margin-left: 20px;
+            &:hover {
+                background-color: #0056b3;
+            }
+            input[type="file"]{
+                display: none; /* 隐藏原始的文件选择按钮 */
+            }
+    }
+    
+       
+    }
+    .comment-container{
+        margin-top: 25px;
+        width: 100%;
+        .comment-title{  
+            list-style-type: none;
+            margin: 0px;
+            height: 6vh;
+            background-color: #459258;
+            li{
+                display: inline-block;
+                padding: 0 18px;
+                cursor: pointer;
+                line-height: 6vh;
+                font-weight: 800;
+                font-size: 1.8vh;
+                a{
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+                &:hover{
+                    background-color: #33775b;
+                    height: 100%;
+                    padding: 0px 18px;
+                    margin: 0px;
+                }
+            }
+            
+        }
+    }
+    .comment-list{
+        overflow-y: auto;
+    }
+}
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #459258;
+    text-align: center; 
+    ul{
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    li{
+        display: inline-block;
+        list-style-type: none;
+        padding: 0 10px;
+        line-height: 10vh;
+        font-size: 2.5vh;
+        font-weight: 600;
+        color: #ffffff;
+        a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        &:hover{
+            background-color: #33775b;
+            height: 100%;
+            padding: 0px 10px;
+            margin: 0px;
+        }
+    }
+
+}
+
+
+
