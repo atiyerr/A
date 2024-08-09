@@ -10,16 +10,16 @@
                 <li><a href="#set">set</a></li>
             </ul>
             <ul class="state">
-                    <li><a href="#login">login</a></li>
-                    <li><a href="#logout">logout</a></li>
-                    <li><a href="#register">register</a></li>
-                </ul>
+                <li ><a href="#login" @click.prevent="Login">login</a></li>
+                <li><a href="#logout">logout</a></li>
+                <li><a href="#register">register</a></li>
+            </ul>
         </div>
         <div class="homepage">
-        <h1>welcome to treehole！！</h1>
-        <p>You can say anything here,and nobody know who you are.</p>
+            <h1>welcome to treehole！！</h1>
+            <p>You can say anything here,and nobody know who you are.</p>
         
-        <div class="container">
+            <div class="container">
             <div class="set">
                 <div class="personal">
                     <div class="avatar">
@@ -61,27 +61,25 @@
                 </div>
                 <div class="comment-list">评论区</div>
             </div>
-        </div>
+            </div>
 
-        <div class="footer">
+            <div class="footer">
             <ul class="links">
                 <li><a href="#about">About us</a></li>
                 <li>|</li>
                 <li><a href="#contact">Contact us</a></li>
             </ul>
-        </div>
-
-
-    
-    </div> 
+            </div>
+        </div> 
     </div>
     
 </template>
 
-<script>
-</script>
+<script></script>
+   
 
 <style scoped lang="less">
+
 
     // 适配不同大小窗口
     @import 'homepage1.less';

@@ -1,38 +1,39 @@
 <template>
-	<div class="login-register">
+	<button class="close"></button>
+	<div class="login-register" >	
 		<div class="contain">
 			<div class="big-box" :class="{active:isLogin}">
 				<div class="big-contain" key="bigContainLogin" v-if="isLogin">
-					<div class="btitle">账户登录</div>
+					<div class="btitle">LOGIN ACCOUNT</div>
 					<div class="bform">
-						<input type="email" placeholder="邮箱" v-model="form.useremail">
-						<span class="errTips" v-if="emailError">* 邮箱填写错误 *</span>
-						<input type="password" placeholder="密码" v-model="form.userpwd">
-						<span class="errTips" v-if="emailError">* 密码填写错误 *</span>
+						<input type="email" placeholder="Email" v-model="form.useremail">
+						<span class="errTips" v-if="emailError">*Email filled in incorrectly *</span>
+						<input type="password" placeholder="Password" v-model="form.userpwd">
+						<span class="errTips" v-if="emailError">* Password filled in incorrectly *</span>
 					</div>
-					<button class="bbutton" @click="login">登录</button>
+					<button class="bbutton" @click="login">LOGIN</button>
 				</div>
 				<div class="big-contain" key="bigContainRegister" v-else>
-					<div class="btitle">创建账户</div>
+					<div class="btitle">CREATE ACCOUNT</div>
 					<div class="bform">
-						<input type="text" placeholder="用户名" v-model="form.username">
-						<span class="errTips" v-if="existed">* 用户名已经存在！ *</span>
-						<input type="email" placeholder="邮箱" v-model="form.useremail">
-						<input type="password" placeholder="密码" v-model="form.userpwd">
+						<input type="text" placeholder="Username" v-model="form.username">
+						<span class="errTips" v-if="existed">*Username already exists!*</span>
+						<input type="email" placeholder="Email" v-model="form.useremail">
+						<input type="password" placeholder="Password" v-model="form.userpwd">
 					</div>
-					<button class="bbutton" @click="register">注册</button>
+					<button class="bbutton" @click="register">REGISTER</button>
 				</div>
 			</div>
 			<div class="small-box" :class="{active:isLogin}">
 				<div class="small-contain" key="smallContainRegister" v-if="isLogin">
-					<div class="stitle">你好，朋友!</div>
-					<p class="scontent">开始注册，和我们一起旅行</p>
-					<button class="sbutton" @click="changeType">注册</button>
+					<div class="stitle">Hi!</div>
+					<p class="scontent">Are you ready to start your treehole journey?</p>
+					<button class="sbutton" @click="changeType">REGISTER</button>
 				</div>
 				<div class="small-contain" key="smallContainLogin" v-else>
-					<div class="stitle">欢迎回来!</div>
-					<p class="scontent">与我们保持联系，请登录你的账户</p>
-					<button class="sbutton" @click="changeType">登录</button>
+					<div class="stitle">Welcome back!</div>
+					<p class="scontent">Please log in to your account</p>
+					<button class="sbutton" @click="changeType">login</button>
 				</div>
 			</div>
 		</div>
@@ -40,7 +41,17 @@
 </template>
 
 <script>
-	export default{
+
+	// 监听窗口滚动事件，动态调整login组件的位置
+	window.addEventListener('scroll', () => {
+    	const loginElement = document.querySelector('.login-register');
+    	if (loginElement) {
+      	  const scrollTop = window.scrollY;
+      		loginElement.style.top = `${scrollTop}px`;
+    	}
+  	});
+
+	export default {
 		name:'login-register',
 		data(){
 			return {
