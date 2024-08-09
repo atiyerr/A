@@ -1,6 +1,6 @@
 <template>
 	<div class="entirety"v-if="visible">
-		<div class="background" @click="close" ></div>
+		<div class="background" ></div>
 		<div class="contain">
 			<div class="big-box" :class="{active:isLogin}">
 				<div class="big-contain" key="bigContainLogin" v-if="isLogin">

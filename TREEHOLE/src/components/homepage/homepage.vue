@@ -1,6 +1,6 @@
 <template>
     <div class="below">
-        <login v-if="visible"> </login>
+        <login v-if="visible" @click="close"> </login>
         <div class="above">
 
             <div class="logo">
@@ -93,7 +93,10 @@
         methods: {
             Login() {
                 this.visible =true
-            }
+            },
+            close(){
+				this.visible = false;
+			}
         }
     }
 </script>
