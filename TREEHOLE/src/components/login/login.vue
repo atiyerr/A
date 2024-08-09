@@ -1,6 +1,6 @@
 <template>
 	<div class="entirety"v-if="visible">
-		<div class="background" ></div>
+		<div class="background" @click="close" ></div>
 		<div class="contain">
 			<div class="big-box" :class="{active:isLogin}">
 				<div class="big-contain" key="bigContainLogin" v-if="isLogin">
@@ -72,8 +72,9 @@
 			}
 		},
 		methods:{
-			close(){
-				this.visible = false;
+			close() {
+				this.$emit('close');
+	  		},
 			},
 			changeType() {
 				this.isLogin = !this.isLogin
@@ -92,22 +93,19 @@
 							password: self.form.userpwd
 						}
 					})
-					.then( res => {
-						switch(res.data){
-							case 0: 
-								alert("登陆成功！");
-								break;
-							case -1:
-								this.emailError = true;
-								break;
-							case 1:
-								this.passwordError = true;
-								break;
+					.then((res) => {
+						if (res.data === 0) {
+							alert("登录成功!");
+							this.close();
+						} else if (res.data === -1) {
+							this.emailError = true;
+						} else if (res.data === 1) {
+							this.passwordError = true;
 						}
-					})
-					.catch( err => {
-						console.log(err);
-					})
+						})
+						.catch( err => {
+							console.log(err);
+						})
 				} else{
 					alert("填写不能为空！");
 				}
@@ -143,7 +141,7 @@
 				}
 			}
 		}
-	}
+	
 </script>
 
 

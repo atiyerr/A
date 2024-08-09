@@ -1,6 +1,6 @@
 <template>
     <div class="below">
-        <login v-if="visible" @click="close"> </login>
+        <login v-if="visible" @close="close"> </login>
         <div class="above">
 
             <div class="logo">
