@@ -1,6 +1,8 @@
 <template>
     <div class="below">
+        <login v-if="visible"> </login>
         <div class="above">
+
             <div class="logo">
                 <img src="../../image/logo.png" alt="logo">
                 <h3>TREEHOLE</h3>
@@ -12,7 +14,7 @@
             <ul class="state">
                 <li ><a href="#login" @click.prevent="Login">login</a></li>
                 <li><a href="#logout">logout</a></li>
-                <li><a href="#register">register</a></li>
+                <li><a href="#register" @click.prevent="Login">register</a></li>
             </ul>
         </div>
         <div class="homepage">
@@ -71,11 +73,30 @@
             </ul>
             </div>
         </div> 
+        
     </div>
+    
     
 </template>
 
-<script></script>
+<script>
+    import login from '../login/login.vue'
+    export default {
+        data() {
+            return{
+                visible:false,
+            }
+        },
+        components: {
+            login
+        },
+        methods: {
+            Login() {
+                this.visible =true
+            }
+        }
+    }
+</script>
    
 
 <style scoped lang="less">

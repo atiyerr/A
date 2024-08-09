@@ -1,6 +1,6 @@
 <template>
-	<button class="close"></button>
-	<div class="login-register" >	
+	<div class="entirety"v-if="visible">
+		<div class="background" @click="close" ></div>
 		<div class="contain">
 			<div class="big-box" :class="{active:isLogin}">
 				<div class="big-contain" key="bigContainLogin" v-if="isLogin">
@@ -37,24 +37,29 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		</div>
+		
+
+	
+
 </template>
 
 <script>
 
 	// 监听窗口滚动事件，动态调整login组件的位置
-	window.addEventListener('scroll', () => {
-    	const loginElement = document.querySelector('.login-register');
-    	if (loginElement) {
-      	  const scrollTop = window.scrollY;
-      		loginElement.style.top = `${scrollTop}px`;
-    	}
-  	});
+	// window.addEventListener('scroll', () => {
+    // 	const loginElement = document.querySelector('.login-register');
+    // 	if (loginElement) {
+    //   	  const scrollTop = window.scrollY;
+    //   		loginElement.style.top = `${scrollTop}px`;
+    // 	}
+  	// });
 
 	export default {
 		name:'login-register',
 		data(){
 			return {
+				visible:true,
 				isLogin:false,
 				emailError: false,
 				passwordError: false,
@@ -67,6 +72,9 @@
 			}
 		},
 		methods:{
+			close(){
+				this.visible = false;
+			},
 			changeType() {
 				this.isLogin = !this.isLogin
 				this.form.username = ''
