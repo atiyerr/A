@@ -2,6 +2,7 @@
     <div class="below">
         <login v-if="visible" @close="close"> </login>
         <div class="above">
+        
 
             <div class="logo">
                 <img src="../../image/logo.png" alt="logo">
@@ -28,7 +29,7 @@
                         <img src="../../image/original.png" alt="avatar">
                     </div>
                     <ul class="profile">
-                        <li>username：{{username}}</li>
+                        <!-- <li>username：{{username}}</li> -->
                         <li>current identity：<a href="#change">identity-></a></li>
                         <li>change profile:<a href="#edit">edit</a></li>
                     </ul>
@@ -80,6 +81,7 @@
 </template>
 
 <script>
+
     import login from '../login/login.vue'
     export default {
         data() {

@@ -1,0 +1,22 @@
+# 记录配置文件
+# 必须是与config.go中的结构体一致
+
+{
+"App": {
+    "Name": "TREEHLOE",
+    "Port": ":10500"
+},
+
+"Database": {
+    # "Host": "localhost",
+    # "Port": ":3306",
+    # "User": "root",
+    # "Password": "123456",
+    # "Name": "treehole"
+    "Dsn":"root:123456@tcp(127.0.0.1:3306)/treehole?charset=utf8&parseTime=True&loc=Local",
+    "MaxidleConns": 10,
+    "MaxopenConns": 100
+}
+}
+
+
